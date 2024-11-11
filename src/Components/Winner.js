@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Confetti from "react-confetti";
+import "./Winner.css";
 
 const Winner = ({ winner, isGameOver }) => {
+  const navigate = useNavigate();
+  function restart() {
+    navigate("/");
+  }
   return (
     <div className="winner">
       <Confetti
@@ -11,16 +16,18 @@ const Winner = ({ winner, isGameOver }) => {
         numberOfPieces={200}
       />
 
-      <div className="Player">
+      <div className="player">
         {winner && isGameOver ? (
-          <span>Player {winner} Wins</span>
+          <h3>
+            Player "<span className="name">{winner}</span>" Wins
+          </h3>
         ) : (
-          <span> Its a Tie </span>
+          <span className="name"> Its a Tie </span>
         )}
+        <button className="restart" onClick={restart}>
+          Restart
+        </button>
       </div>
-      <button className="restart">
-        <Link to="/">Restart</Link>
-      </button>
     </div>
   );
 };

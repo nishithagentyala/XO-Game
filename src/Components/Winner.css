@@ -1,0 +1,31 @@
+.winner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.player {
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 200px;
+}
+.name {
+  background: linear-gradient(45deg, blue, rgb(223, 108, 127));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+}
+.restart {
+  outline: none;
+  text-decoration: none;
+  background-color: rgb(143, 138, 226);
+  text-align: center;
+  color: rgb(201, 81, 81);
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid burlywood;
+  padding: 7px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Game from "./Game";
 import { useState, useEffect } from "react";
 import Winner from "./Winner";
+import "./GameBoard.css";
 
 const GameBoard = ({ currentPlayer, setCurrentPlayer }) => {
   const [board, setBoard] = useState(Array(9).fill(""));
@@ -57,7 +58,7 @@ const GameBoard = ({ currentPlayer, setCurrentPlayer }) => {
           <div className="backdrop"></div>
         ) : (
           <>
-            <div>
+            <div className="playerName">
               Player <span> {currentPlayer}'s turn</span>
             </div>
             <div className="board">
@@ -70,7 +71,7 @@ const GameBoard = ({ currentPlayer, setCurrentPlayer }) => {
                   }}
                 />
               ))}
-            </div>{" "}
+            </div>
           </>
         )}
       </div>

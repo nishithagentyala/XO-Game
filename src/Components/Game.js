@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./GameBoard.css";
 const Game = ({ value, onClick }) => {
   return (
-    <button className="box" onClick={onClick}>
+    <button className="cell" onClick={onClick}>
       {value}
     </button>
   );
